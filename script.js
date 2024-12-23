@@ -73,6 +73,9 @@ async function getWeather() {
     }
 
     try {
+        const suggestionsList = document.getElementById("suggestions");
+        suggestionsList.innerHTML = ""; // Esconde a lista de sugestões
+
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=pt_br&appid=${apiKey}`
         );
@@ -130,6 +133,12 @@ async function getWeather() {
         alert(error.message);
     }
 }
+
+// Esconde a lista de sugestões ao clicar no botão de pesquisa
+document.getElementById("search-btn").addEventListener("click", () => {
+    document.getElementById("suggestions").innerHTML = "";
+    getWeather();
+});
 
 // Limpa o campo de entrada ao carregar a página
 window.addEventListener("load", () => {
