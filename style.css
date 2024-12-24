@@ -2,11 +2,12 @@
 
 *{
      box-sizing: border-box;
+     user-select: none;
 }
 
 body {
     margin: 0;
-    background-color: #fff;
+    background-color: #efefef;
     font-family: "Poppins", sans-serif;
     padding: 0;
     height: 100vh;
@@ -52,7 +53,7 @@ input {
     box-sizing: border-box;
     border-radius: 40px;
     border: 1px solid #d6cccc;
-    background-color: #f1f1f1;
+    background-color: #ededef;
     outline: none;
     text-align: start;
     margin-right: 10px;
@@ -60,12 +61,18 @@ input {
 }
 
 .btn {
-    background-color: ;
+    background-color: #20bc54;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-size: 15px;
+    color: #000000;
 
+}
+
+.btn:hover {
+    background-color: #3bd46e;
+    color: #000000;
 }
 
 #temp-div {
@@ -111,12 +118,18 @@ input {
 
 .hourly-item {
     flex: 0 0 auto;
-    width: 80px;
+    width: 90px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    height: 110px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-right: 10px;
     color: rgb(0, 0, 0);
+    background-color: #748cf1;
+
 }
 
 .hourly-item img{
@@ -158,13 +171,16 @@ input {
         width: 90%;
         margin: 10px 0;
     }
+    
 
     #weather-info {
         font-size: 18px;
     }
 
     .hourly-item {
-        width: 70px;
+        width: 80px;
+        padding: 10px;
+        margin-right: 5px;
     }
 
     .meu-card {
@@ -187,9 +203,5 @@ input {
         margin-top: 10px;
         flex-wrap: wrap;
         justify-content: space-around;
-    }
-
-    .hourly-item {
-        margin-right: 5px;
     }
 }
