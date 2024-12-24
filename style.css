@@ -160,6 +160,15 @@ input {
     margin-right: 0px;
 }
 
+.img-footer img {
+    width: 150px;
+    height: 150px;
+}
+
+.img-footer {
+    margin-top: -15%;
+}
+
 /* Media Query para telas menores */
 @media (max-width: 768px) {
     .suggestions-list {
@@ -176,6 +185,7 @@ input {
     #weather-info {
         font-size: 18px;
     }
+
 
     .hourly-item {
         width: 80px;
