@@ -23,7 +23,7 @@ function updateClockAndDate(timezoneOffset) {
     const hours = localTime.getHours().toString().padStart(2, "0");
     const minutes = localTime.getMinutes().toString().padStart(2, "0");
     const day = localTime.getDate().toString().padStart(2, "0");
-    const month = (localTime.getMonth() + 1).toString().padStart(2, "0"); // Os meses são de 0 a 11
+    const month = (localTime.getMonth() + 1).toString().padStart(2, "0");
     const year = localTime.getFullYear();
 
     document.getElementById("time").innerHTML = `${hours}:${minutes}`;
@@ -105,6 +105,7 @@ async function getWeather() {
         updateClockAndDate(timezoneOffset);
         setInterval(() => updateClockAndDate(timezoneOffset), 60000); // Atualiza a cada minuto
 
+        // Previsão por hora
         const forecastResponse = await fetch(
             `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&lang=pt_br&appid=${apiKey}`
         );
@@ -116,8 +117,6 @@ async function getWeather() {
         forecastData.list.slice(0, 10).forEach((forecast) => {
             const forecastTime = new Date(forecast.dt * 1000).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
             const forecastTemp = `${Math.round(forecast.main.temp)}°C`;
-            const forecastHumidity = `${forecast.main.humidity}%`;
-            const forecastDescription = forecast.weather[0].description;
             const forecastIcon = weatherIcons[forecast.weather[0].main] || "https://cdn-icons-png.flaticon.com/512/869/869869.png";
 
             const forecastItem = document.createElement("div");
