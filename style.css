@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 *{
      box-sizing: border-box;
@@ -8,8 +7,8 @@
 
 body {
     margin: 0;
-    background-color: #2a4f84;
-    font-family: "Outfit", serif;
+    background-color: #efefef;
+    font-family: "Poppins", sans-serif;
     padding: 0;
     height: 100vh;
     /*background-image: url(/images/1.jpg);
@@ -18,17 +17,12 @@ body {
 
 }
 
-.minavbar {
-    background-color: #183561;
-}
-
 .container {
-    margin-top: 4rem;
+    backdrop-filter: blur(5px);
 }
 
 .conteudo-principal {
     text-align: center;
-    height: 100vh;
 }
 
 .suggestions-list {
@@ -57,6 +51,7 @@ input {
     width: 300px;
     padding: 8px;
     box-sizing: border-box;
+    border-radius: 40px;
     border: 1px solid #d6cccc;
     background-color: #ededef;
     outline: none;
@@ -65,20 +60,14 @@ input {
 
 }
 
-input::placeholder {
-    color: #000000;
-}
-
 .btn {
-    background-color: #ffffff;
+    background-color: #20bc54;
     border: none;
-    border-radius: 0px;
+    border-radius: 10px;
     cursor: pointer;
-}
-
-.btn i {
+    font-size: 15px;
     color: #000000;
-    font-size: 17px;
+
 }
 
 .btn:hover {
@@ -86,43 +75,36 @@ input::placeholder {
     color: #000000;
 }
 
-.tempo-cidade-info {
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    font-family: "Outfit", serif;
-}
-
 #temp-div {
-    font-size: 10rem;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+    font-size: 60px;
 }
 
 #weather-info {
-    font-size: 2rem;
+    font-size: 20px;
+    margin-top: -10px;
 }
 
-#city-name {
-    font-size: 2rem;
+.line {
+    margin-top: 10px;
+    font-weight: bolder;
+    color: #ddd9d9;
 }
 
 #weather-icon {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto 10px; 
     margin-bottom: 0;
     display: none;
 }
 
-#date {
-    color: #ffffff;
-}
 #time {
     margin-top: 0px;
-    color: #ffffff;
+}
+
+#city-name {
+    font-size: 30px;
+    font-weight: lighter;
 }
 
 #hourly-forecast {
@@ -146,7 +128,7 @@ input::placeholder {
     align-items: center;
     margin-right: 10px;
     color: rgb(0, 0, 0);
-    background-color: #ffffff;
+    background-color: #748cf1;
 
 }
 
@@ -163,8 +145,7 @@ input::placeholder {
 
 .meu-card {
     display: flex;
-    font-size: 1.5rem;
-    color: #ffffff;
+    font-size: 20px;
     font-weight: 400px;
     margin-right: 30px;
 }
