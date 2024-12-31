@@ -88,7 +88,7 @@ async function getWeather() {
         const weatherMain = data.weather[0].main;
         const iconUrl = weatherIcons[weatherMain] || "https://cdn-icons-png.flaticon.com/512/869/869869.png";
         document.getElementById("weather-icon").innerHTML = `
-            <img src="${iconUrl}" alt="Weather Icon" style="width: 200px; height: 200px;" />
+            <img src="${iconUrl}" alt="Weather Icon" style="width: 100px; height: 100px;" />
         `;
         document.getElementById("weather-icon").style.display = "block";
 
@@ -128,6 +128,9 @@ async function getWeather() {
             `;
             hourlyForecastDiv.appendChild(forecastItem);
         });
+
+        // Adiciona o nome da cidade na div "city-name"
+        document.getElementById("city-name").innerHTML = `${data.name}, ${data.sys.country}`;
     } catch (error) {
         alert(error.message);
     }
